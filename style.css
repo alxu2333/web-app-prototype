@@ -1,0 +1,409 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+.toolbar {
+    display: grid; /*applies css grid*/
+    width: 100%;
+    height: 70px;
+    align-items: center;
+    justify-items: center; /* makes sure everything is centered */
+    position: fixed; /* makes sure it stays to the top of the screen */
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: 12; /*pushes to the top*/
+}
+
+
+.toolbar_link {
+    color: black;
+    text-decoration: none;
+    font-family: Inter, sans-serif;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+/*customising title (fitness tracker)*/
+
+
+.bench_press_image {
+    object-fit: cover;
+    grid-column: 1/999;
+    grid-row: 1/999;
+    width: 100%;
+    height: 500px;
+}
+
+/*grid-column and grid-row makes sure it spans across the whole page, along with width 100%. height crops it so that it doesn't go past 500pixels. object fit makes sure the image doesnt rescale'*/
+
+
+.main_content {
+    color: black;
+    text-decoration: none;
+    font-family: Inter, sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    text-align: center;
+    justify-items: center;
+
+}
+
+/*creates a preset for the "main content" to minimise repetition of code, while making it a grid for easier formatting*/
+
+.dropdown {
+    grid-column: 2;
+    font-size: 20px;
+    padding: 30px 0 0 0;
+}
+
+/*customising text above dropdown menu - position and size*/
+
+.dropdown_button {
+    font-size: 20px;
+    border: none;
+    background-color: #EDDBFE;
+    padding: 5% 5% 5% 5%;
+    border-radius: 5px;
+    font-family: Inter, sans-serif;
+}
+
+/*customising dropdown colour, shape, font and font size*/
+
+
+.user_input {
+    color: black;
+    text-decoration: none;
+    font-family: Inter, sans-serif;
+    display: grid;
+    text-align: center;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(5, auto);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/*creates a 'preset' for the user input boxes and titles. namely setting up grid, font, making everything centered and colour*/
+
+.exercise {
+    padding: 10% 0 5% 0;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+
+.exercise_name_box {
+    grid-column: 2;
+    grid-row: 2;
+    border: none;
+    background-color: #e8e8e8;
+    height: 100%;
+    width: 70%;
+    border-radius: 5px;
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    margin-bottom: 8%;
+    text-align: center;
+}
+
+.sets {
+    padding: 10% 0 5% 0;
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.sets_box {
+    grid-column: 3;
+    grid-row: 2;
+    border: none;
+    background-color: #e8e8e8;
+    height: 100%;
+    width: 70%;
+    border-radius: 5px;
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    margin-bottom: 8%;
+    text-align: center;
+
+}
+
+.reps {
+    padding: 10% 0 5% 0;
+    grid-column: 4;
+    grid-row: 1;
+}
+
+.reps_box {
+    grid-column: 4;
+    grid-row: 2;
+    border: none;
+    background-color: #e8e8e8;
+    height: 100%;
+    width: 70%;
+    border-radius: 5px;
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 8%;
+}
+
+.weight {
+    padding: 10% 0 5% 0;
+    grid-row: 1;
+    grid-column: 5;
+}
+
+.weight_box {
+    grid-row: 2;
+    grid-column: 5;
+    border: none;
+    background-color: #e8e8e8;
+    height: 100%;
+    width: 70%;
+    border-radius: 5px;
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 8%;
+}
+
+/*above^, editing position, font, box colour, box corner smoothing, text centering, box colour and format*/
+
+.enter {
+    margin: 40px 0 0 0;
+    padding: 10px 2% 10px 2%;
+    grid-row: 5;
+    grid-column: 1/999;
+    font-size: 25px;
+    font-weight: bold;
+    border: none;
+    background-color: black;
+    color: white;
+    opacity: 1;
+    border-radius: 15px;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.enter:hover {
+    opacity: 0.8;
+}
+
+/*editing enter button, adding box size, position, text colour, button colour, font and a click/hover effect*/
+
+.user_output_titles {
+    text-decoration: none;
+    font-family: Inter, sans-serif;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
+    text-align: center;
+}
+
+/*creates a quick preset for the titles and subtitles of the "user output information"*/
+
+.results {
+    padding: 5% 0 0 0;
+    grid-row: 1;
+    grid-column: 1/999;
+    text-align: center;
+    font-size: 30px;
+}
+
+
+.title_date {
+    grid-column: 2;
+    grid-row: 2;
+    padding: 10% 0 5% 0;
+    font-weight: bold;
+    font-size: 28px
+}
+
+
+.title_exercise {
+    grid-column: 3;
+    grid-row: 2;
+    padding: 10% 0 5% 0;
+    font-weight: bold;
+    font-size: 28px
+}
+
+.title_set {
+    grid-column: 4;
+    grid-row: 2;
+    padding: 10% 0 5% 0;
+    font-weight: bold;
+    font-size: 28px
+}
+
+.title_rep {
+    grid-column: 5;
+    grid-row: 2;
+    padding: 10% 0 5% 0;
+    font-weight: bold;
+    font-size: 28px
+}
+
+.title_weight {
+    grid-column: 6;
+    grid-row: 2;
+    padding: 10% 0 5% 0;
+    font-weight: bold;
+    font-size: 28px
+
+}
+
+/*^editing the text, positioning, spacing*/
+
+
+.user_output {
+    text-decoration: none;
+    font-family: Inter, sans-serif;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
+    text-align: center;
+}
+
+.remove {
+    background-color: white;
+    border: none;
+    grid-column: 7;
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    text-align: left;
+    height: 100%;
+    align-items: baseline;
+    width: 40%;
+    line-height: 0;
+    padding-top: 15%;
+}
+
+
+.output_date {
+    grid-column: 2;
+    text-align: center;
+    padding: 8% 0 0 0;
+    font-size: 23px
+}
+
+
+.output_exercise {
+    grid-column: 3;
+    padding: 8% 0 0 0;
+    font-size: 23px
+}
+
+.output_set {
+    grid-column: 4;
+    padding: 8% 0 0 0;
+    font-size: 23px
+}
+
+.output_rep {
+    grid-column: 5;
+    padding: 8% 0 0 0;
+    font-size: 23px
+}
+
+.output_weight {
+    grid-column: 6;
+    padding: 8% 0 0 0;
+    font-size: 23px
+}
+
+
+
+
+/*^editing the text, positioning, spacing*/
+
+@media (max-width: 925px) {
+
+    .bench_press_image {
+        height: 300px;
+    }
+
+    /*reduces image size on a smaller, more portrait screen*/
+    .user_input {
+        font-size: 15px;
+
+    }
+
+    .title_date {
+        font-size: 15px;
+    }
+
+    .title_exercise {
+        font-size: 15px;
+    }
+
+    .title_set {
+        font-size: 15px;
+    }
+
+    .title_rep {
+        font-size: 15px;
+    }
+
+    .title_weight {
+        font-size: 15px;
+    }
+
+    .output_date {
+        font-size: 12px;
+        padding: 12% 0 12% 0;
+    }
+
+    .output_exercise {
+        font-size: 12px;
+        padding: 12% 0 12% 0;
+    }
+
+    .output_set {
+        font-size: 12px;
+        padding: 12% 0 12% 0;
+    }
+
+    .output_rep {
+        font-size: 12px;
+        padding: 12% 0 12% 0;
+    }
+
+    .output_weight {
+        font-size: 12px;
+        padding: 12% 0 12% 0;
+    }
+
+    /*adjusting font and spacing for smaller screen to avoid overcrowding*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

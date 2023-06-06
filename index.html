@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale = 1.0" name="viewport">
+    <title>Fitness Tracker</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;700&display=swap" rel="stylesheet">
+
+    <!--links font, css and js to html file and site-->
+
+</head>
+<body>
+
+<!--TOOLBAR/TITLE-->
+<nav class="toolbar">
+    <a class="toolbar_link" href="index.html">FITNESS TRACKER</a>
+</nav>
+
+<!--thumbnail-->
+<section class="chest_triceps_image">
+    <img alt="bench_press"
+         class="bench_press_image" src="https://images.unsplash.com/photo-1616803689943-5601631c7fec?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80">
+</section>
+
+
+<main class="main_content">
+    <!--DROPDOWN MENU-->
+    <section class="dropdown">
+        <label for="body_group">Choose a body part group: <br><br></label>
+        <select class="dropdown_button" id="body_group" name="body_group">
+            <option selected value="chest&triceps">Chest & Triceps</option>
+            <option value="back&biceps">Back & Biceps</option>
+            <option value="legs&abs">Legs & Abs</option>
+        </select>
+    </section>
+</main>
+
+<!--USER INPUTTED INFORMATION-->
+<!--form for user to input information into-->
+<form class="user_input">
+    <label class="exercise" for="exercise_name">EXERCISE:</label><br>
+    <input class="exercise_name_box" id="exercise_name" name="exercise_name" type="text"><br>
+
+    <label class="sets" for="sets_number">SETS:</label><br>
+    <input class="sets_box" id="sets_number" name="sets_number" type="text"><br>
+
+    <label class="reps" for="reps_number">REPS:</label><br>
+    <input class="reps_box" id="reps_number" name="reps_number" type="text"><br>
+
+    <label class="weight" for="weight_number">WEIGHT:</label><br>
+    <input class="weight_box" id="weight_number" name="weight_number" type="text"><br>
+    <button class="enter" id="enter_button" type="button">ENTER</button>
+</form>
+
+
+<!--OUTPUTTED INFORMATION-->
+<!--titles for outputted information-->
+<section class="user_output_titles">
+    <div class="results">RESULTS</div>
+    <div class="title_date">DATE</div>
+    <div class="title_exercise">EXERCISE</div>
+    <div class="title_set">SET</div>
+    <div class="title_rep">REP</div>
+    <div class="title_weight">WEIGHT</div>
+</section>
+
+<!--outputted information from localStorage-->
+<section class="user_output_format" id="user_output_format">
+
+</section>
+
+
+
+<!--LINK TO/FROM JS-->
+<script src="main.js"></script>
+
+<br/><br/><br/><br/><br/>
+<!--just to create a little margin at the bottom-->
+
+
+</body>
+</html>
